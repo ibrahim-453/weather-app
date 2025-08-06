@@ -23,7 +23,7 @@ function Header() {
           WeatherNow
         </h1>
 
-        <form onSubmit={handleSubmit} className='max-w-[210px]'>
+        <form onSubmit={handleSubmit} className='max-w-[220px]'>
           <div className='flex justify-center items-center bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-4 py-1 duration-300 hover:bg-white/25 focus-within:bg-white/25'>
             <input
               type='text'
