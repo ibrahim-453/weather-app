@@ -25,7 +25,7 @@ function Header() {
                 <form onSubmit={handleSubmit} className='relative'>
                     <div className='flex items-center bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2 sm:px-6 sm:py-3 min-w-[200px] sm:min-w-[280px] transition-all duration-300 hover:bg-white/25 focus-within:bg-white/25 focus-within:border-white/50'>
                         <input 
-                            className='flex-1 bg-transparent outline-none text-white placeholder-white/70 text-sm sm:text-base' 
+                            className='flex-1 bg-transparent outline-none text-black placeholder-white/70 text-sm sm:text-base' 
                             value={input} 
                             onChange={(e) => setInput(e.target.value)} 
                             type="text" 

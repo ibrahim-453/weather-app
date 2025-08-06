@@ -1,19 +1,21 @@
-import hero from "../assets/heroimage.jpeg";
+import { useWeather } from "../context/WeatherContext";
 import Weather from "./Weather";
+import { getbgimage } from "../BgImage/getbgimage"
 
 function HeroSection() {
-    return (
-        <div
-            style={{ backgroundImage: `url(${hero})` }}
-            className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center p-4"
-        >
+  const { weather } = useWeather();
+  const bgImage = getbgimage(weather?.current?.condition?.text);
 
-            <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60"></div>
-            <div className="relative z-10 w-full max-w-6xl mx-auto pt-20 sm:pt-24">
-                <Weather />
-            </div>
-        </div>
-    );
+  return (
+    <div
+      style={{ backgroundImage: `url(${bgImage})` }}
+      className="relative w-full min-h-screen bg-center bg-cover bg-no-repeat flex items-center justify-center p-4"
+    >
+      <div className="relative z-10 w-full max-w-6xl mx-auto pt-20 sm:pt-24">
+        <Weather />
+      </div>
+    </div>
+  );
 }
 
 export default HeroSection;
